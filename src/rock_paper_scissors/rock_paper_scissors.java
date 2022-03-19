@@ -32,5 +32,14 @@ public class rock_paper_scissors {
         System.out.print("Enter your choice, paper, rock or scissors ");
         System.out.print("> ");                // print prompt
     }
-
+    /**
+     * Return the user's input for a round of the game.
+     * 
+     * @return userInput The user's input.
+     */
+    public String userChoice() 
+    {
+        String userInput = reader.getInput().trim().toLowerCase(); // no leading and trailing space, in lowercase
+        return userInput;
+    }
 }
