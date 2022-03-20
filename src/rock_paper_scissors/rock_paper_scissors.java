@@ -42,4 +42,35 @@ public class rock_paper_scissors {
         String userInput = reader.getInput().trim().toLowerCase(); // no leading and trailing space, in lowercase
         return userInput;
     }
+    
+    /**
+     * Return a generated random computer's choice of "rock" (value 0), "paper" (value 1) 
+     * or "scissors" (value 2).
+     * 
+     * @return result A Strings, where this is one of the choices.
+     *         
+     */
+    public String computerChoice() 
+    {
+        int upperbound = 2;
+        int intRandom = ran.nextInt(upperbound+1);
+        String result = "";
+        
+        switch(intRandom) {
+            case 0:
+                result = "rock";
+                break;
+            case 1: 
+            	result = "paper";
+                break;
+            case 2: 
+               result = "scissors";
+                break;
+            default:
+                result = "error";
+                break;
+        }
+        
+        return result;
+    }
 }
