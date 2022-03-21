@@ -73,4 +73,54 @@ public class rock_paper_scissors {
         
         return result;
     }
+    
+    /**
+     * Determine the winner of the round according to the game's rules, 
+     * returning "draw", "you" or "computer", as appropriate.
+     * 
+     * If yourChoice is an invalid string then the computer is chosen as the winner of this round.
+     * 
+     * @param yourChoice The user's choice for this round. 
+     * @param computerChoice The computer's choice for this round.
+     * 
+     * @return result The winner of the round, or draw whether both choices are the same.
+     */
+    public String findWinner(String yourChoice, String computerChoice) 
+    {
+    	 String result = "";
+         
+
+         if (yourChoice.equals(computerChoice)){
+             result = "draw";
+         }
+         else if (yourChoice.equals("rock") && computerChoice.equals("paper")){
+             computerScore ++;
+             result = "computer";
+         }
+         else if (yourChoice.equals("scissors") && computerChoice.equals("paper")){
+             yourScore ++;
+             result = "you";
+         }
+         else if (yourChoice.equals("paper") && computerChoice.equals("rock")){
+             yourScore ++;
+             result = "you";
+         }
+         else if (yourChoice.equals("scissors") && computerChoice.equals("rock")){
+             computerScore ++;
+             result = "computer";
+         }
+         else if (yourChoice.equals("paper") && computerChoice.equals("scissors")){
+             computerScore ++;
+             result = "computer";
+         }
+         else if (yourChoice.equals("rock") && computerChoice.equals("scissors")){
+             yourScore ++;
+             result = "you";
+         }
+         else {
+             computerScore ++;
+             result = "computer";
+         }
+         return result;
+     }
 }
