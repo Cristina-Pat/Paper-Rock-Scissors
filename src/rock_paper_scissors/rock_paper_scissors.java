@@ -123,4 +123,40 @@ public class rock_paper_scissors {
          }
          return result;
      }
+    
+    /**
+     * Find the winner of the round and update the scores for user and computer.
+     * Indicate who won the round.
+     * 
+     */
+    public void playRound() 
+    {
+        String userInput = "";
+        String computerInput;
+        String winner = "";
+        
+        printPrompt(); //prompt the user to type in their choice of 'rock', 'paper' or 'scissors'
+        userInput = userChoice(); //get the user's choice
+        computerInput = computerChoice(); //generate the computer's choice
+        System.out.println();
+        System.out.println("You have chosen "+ userInput + " and the computer has chosen " + computerInput);
+        
+        winner = findWinner(userInput, computerInput);
+        
+        switch(winner) {
+            case "draw":
+                System.out.println("This game is a draw");
+                break;
+            case "computer": 
+                System.out.println("The computer is the winner");
+                break;
+            case "you": 
+                System.out.println("You are the winner");
+                break;
+        }
+       
+        System.out.println("You have " + yourScore + " and the computer has " + computerScore );
+    }
+    
+    
 }
