@@ -158,5 +158,21 @@ public class rock_paper_scissors {
         System.out.println("You have " + yourScore + " and the computer has " + computerScore );
     }
     
-    
+    /**
+     * Play rounds until user or the computer, has a score of 3. 
+     * The overall winner is announced by at the end of the game.
+     */
+    public void playGame() 
+    {
+        while(yourScore < 3 && computerScore < 3) {
+            playRound();
+        }
+        if (yourScore == 3){
+            System.out.println("The overall winner is you.");
+        } 
+        else {
+            System.out.println("The overall winner is the computer.");
+        }
+        
+    }
 }
