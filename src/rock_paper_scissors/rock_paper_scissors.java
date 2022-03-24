@@ -1,7 +1,15 @@
 package rock_paper_scissors;
 import java.util.Random;
 
-import rock_paper_scissors.input_reader;
+/**
+* This class implements a 'Rock, Paper, Scissors' game. The game communicates
+* via text input/output in the terminal.
+*
+* This class uses an object of class InputReader to read input from the user.
+*
+* @author Cristina Pat
+* @version 2021.03.24
+*/
 
 public class rock_paper_scissors {
 	
